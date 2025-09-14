@@ -5,9 +5,7 @@ class Cat
 {
 public:
     u32 getCatStruct() {
-        u32 offset = Player::getPlayerStruct();
-        u32 addres = ((u32 (*)(u32))0x00a814ec)(offset);
-        return addres;
+        return 0x00ed69a8;
     }
 
     u32 getCatColorStruct() {
