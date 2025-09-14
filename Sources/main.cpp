@@ -85,8 +85,8 @@ exit:
 
     int     main(void)
     {
-        PluginMenu *menu = new PluginMenu("Action Replay", 0, 8, 0,
-                                            "A blank template plugin.\nGives you access to the ActionReplay and others tools.");
+        PluginMenu *menu = new PluginMenu("libMH4 OLD", 0, 8, 0,
+                                            "モンスターハンター4 OLD3ds用のライブラリを搭載したctrpf");
 
         // Synnchronize the menu with frame event
         menu->SynchronizeWithFrame(true);

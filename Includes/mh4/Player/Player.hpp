@@ -1,4 +1,6 @@
 #include <CTRPluginFramework.hpp>
+#include "mh4/Player/Player/PlayerName.hpp"
+#include "mh4/Player/Player/PlayerComment.hpp"
 
 class Player
 {
@@ -17,11 +19,13 @@ public:
         return 0xECD580;
     }
 
-    u32 getPlayerCommentStruct() {
-        return 0x00f39dec;
+    PlayerComment getPlayerCommentClass() {
+        PlayerComment comment;
+        return comment;
     }
 
-    u32 getPlayerCommentContentStruct() {
-        return 0x0F39DF0;
+    PlayerName getPlayerNameClass() {
+        PlayerName playername;
+        return playername;
     }
 };

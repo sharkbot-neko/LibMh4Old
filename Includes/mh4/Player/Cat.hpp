@@ -1,4 +1,5 @@
 #include "Player.hpp"
+#include "mh4/Player/Cat/CatName.hpp"
 #include <CTRPluginFramework.hpp>
 
 class Cat
@@ -24,14 +25,9 @@ public:
         return 0x00ed69de;
     }
 
-    std::string getCatName() {
-        std::string string;
-        CTRPluginFramework::Process::ReadString(0x00ED69A8, string, 15, CTRPluginFramework::StringFormat::Utf16);
-        return string;
-    }
-
-    u32 getCatNameStruct() {
-        return 0x00ED69A8;
+    CatName getCatNameClass() {
+        CatName catname;
+        return catname;
     }
 
 };
