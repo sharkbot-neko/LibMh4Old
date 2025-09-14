@@ -1,0 +1,28 @@
+#include "Player.hpp"
+
+class Cat
+{
+public:
+    u32 getCatStruct() {
+        u32 offset = Player::getPlayerStruct();
+        u32 addres = ((u32 (*)(u32))0x00a814ec)(offset);
+        return addres;
+    }
+
+    u32 getCatColorStruct() {
+        return 0x00ed69c8;
+    }
+
+    u32 getCatHeadStruct() {
+        return 0x00ed69ee;
+    }
+
+    u32 getCatBodyStruct() {
+        return 0x00ed69e6;
+    }
+
+    u32 getCatBukiStruct() {
+        return 0x00ed69de;
+    }
+
+};
