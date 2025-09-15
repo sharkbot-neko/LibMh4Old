@@ -13,7 +13,7 @@ public:
         return 0x00E1CFE4;
     }
 
-    bool isTheQuest() {
+    static bool isTheQuest() {
         u32 OffCheck = getQuestOffset();
         if (OffCheck != 0x00000000) {
             return true;

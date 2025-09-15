@@ -2,6 +2,9 @@
 #include "csvc.h"
 #include <CTRPluginFramework.hpp>
 
+#include "mh4/Item/Item.hpp"
+#include "mh4/Quest/Quest.hpp"
+
 #include <vector>
 
 namespace CTRPluginFramework
@@ -69,18 +72,15 @@ exit:
 
     void    InitMenu(PluginMenu &menu)
     {
-        // Create your entries here, or elsewhere
-        // You can create your entries whenever/wherever you feel like it
-        
-        // Example entry
-        /*menu += new MenuEntry("Test", nullptr, [](MenuEntry *entry)
+        menu += new MenuEntry("アイテム取得", nullptr, [](MenuEntry *entry)
         {
-            std::string body("What's the answer ?\n");
-
-            body += std::to_string(42);
-
-            MessageBox("UA", body)();
-        });*/
+            if (Quest::isTheQuest()) {
+                Item::addItem(Quest::getQuestOffset(), 0x0009, 1);
+            } else {
+                MessageBox("クエストに参加していません。")();
+            }
+            
+        });
     }
 
     int     main(void)
