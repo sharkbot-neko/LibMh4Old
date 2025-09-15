@@ -1,4 +1,5 @@
 #include <CTRPluginFramework.hpp>
+#include "mh4/Quest/Quest/QuestAction.hpp"
 
 class Quest
 {
@@ -20,6 +21,11 @@ public:
         } else {
             return false;
         }
+    }
+
+    static QuestAction getQuestActionClass() {
+        QuestAction q_a;
+        return q_a;
     }
 
 };
