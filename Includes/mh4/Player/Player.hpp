@@ -1,6 +1,7 @@
 #include <CTRPluginFramework.hpp>
 #include "mh4/Player/Player/PlayerName.hpp"
 #include "mh4/Player/Player/PlayerComment.hpp"
+#include "mh4/Player/Player/PlayerMoney.hpp"
 
 class Player
 {
@@ -11,12 +12,9 @@ public:
         return value;
     }
 
-    u32 getMoneyStruct() {
-        return 0x0ECD5B4;
-    }
-
-    u32 getNameStruct() {
-        return 0xECD580;
+    PlayerMoney getPlayerMoneyClass() {
+        PlayerMoney playermoney;
+        return playermoney;
     }
 
     PlayerComment getPlayerCommentClass() {
