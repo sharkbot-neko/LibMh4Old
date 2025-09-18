@@ -1,3 +1,6 @@
+#ifndef PLAYERMONEY_HPP
+#define PLAYERMONEY_HPP
+
 #include <CTRPluginFramework.hpp>
 
 class PlayerMoney
@@ -15,3 +18,5 @@ public:
     }
 
 };
+
+#endif

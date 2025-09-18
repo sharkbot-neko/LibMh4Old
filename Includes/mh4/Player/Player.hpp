@@ -1,3 +1,6 @@
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
+
 #include <CTRPluginFramework.hpp>
 #include "mh4/Player/Player/PlayerName.hpp"
 #include "mh4/Player/Player/PlayerComment.hpp"
@@ -27,3 +30,5 @@ public:
         return playername;
     }
 };
+
+#endif

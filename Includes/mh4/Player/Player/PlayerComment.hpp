@@ -1,3 +1,6 @@
+#ifndef PLAYERCOMMENT_HPP
+#define PLAYERCOMMENT_HPP
+
 #include <CTRPluginFramework.hpp>
 
 class PlayerComment
@@ -21,3 +24,5 @@ public:
         return string;
     }
 };
+
+#endif

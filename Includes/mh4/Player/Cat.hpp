@@ -1,3 +1,6 @@
+#ifndef CAT_HPP
+#define CAT_HPP
+
 #include "Player.hpp"
 #include "mh4/Player/Cat/CatName.hpp"
 #include <CTRPluginFramework.hpp>
@@ -31,3 +34,5 @@ public:
     }
 
 };
+
+#endif

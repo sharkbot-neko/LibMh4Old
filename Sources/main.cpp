@@ -7,6 +7,8 @@
 
 #include <vector>
 
+#include "cheats.hpp"
+
 namespace CTRPluginFramework
 {
     // This patch the NFC disabling the touchscreen when scanning an amiibo, which prevents ctrpf to be used
@@ -72,15 +74,23 @@ exit:
 
     void    InitMenu(PluginMenu &menu)
     {
-        menu += new MenuEntry("アイテム取得", nullptr, [](MenuEntry *entry)
-        {
-            if (Quest::isTheQuest()) {
-                Item::addItem(Quest::getQuestOffset(), 0x0009, 1);
-            } else {
-                MessageBox("クエストに参加していません。")();
-            }
-            
-        });
+        MenuFolder *player = new MenuFolder("プレイヤー");
+        *player += new MenuEntry("名前", nullptr, Name);
+        *player += new MenuEntry("コメント", nullptr, Comment);
+        *player += new MenuEntry("お金", nullptr, Money);
+        *player += new MenuEntry("財布の最大を拡張", nullptr, MoneyMaxUp);
+        *player += new MenuEntry("財布がマイナスでも0にならない", nullptr, MoneyMinusNoReset);
+        *player += new MenuEntry("スピード変更", Speed);
+        menu += player;
+
+        MenuFolder *cat = new MenuFolder("アイルー");
+
+        *cat += new MenuEntry("アイルーの名前を変更", nullptr, CatName_);
+        *cat += new MenuEntry("アイルーの装備変更", nullptr, CatBuki);
+        *cat += new MenuEntry("アイルーの色変更", nullptr, CatColor);
+        *cat += new MenuEntry("虹色アイルー", RaibowCat);
+
+        *player += cat;
     }
 
     int     main(void)

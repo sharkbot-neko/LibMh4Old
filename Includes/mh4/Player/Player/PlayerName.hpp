@@ -1,3 +1,6 @@
+#ifndef PLAYERNAME_HPP
+#define PLAYERNAME_HPP
+
 #include <CTRPluginFramework.hpp>
 
 class PlayerName
@@ -17,3 +20,5 @@ public:
         return string;
     }
 };
+
+#endif

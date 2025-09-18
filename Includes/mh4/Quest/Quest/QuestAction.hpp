@@ -1,3 +1,6 @@
+#ifndef QUESTACTION_HPP
+#define QUESTACTION_HPP
+
 #include <CTRPluginFramework.hpp>
 
 class QuestAction
@@ -11,3 +14,5 @@ public:
     }
 
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef CATNAME_HPP
+#define CATNAME_HPP
+
 #include "Player.hpp"
 #include <CTRPluginFramework.hpp>
 
@@ -20,3 +23,5 @@ public:
     }
 
 };
+
+#endif

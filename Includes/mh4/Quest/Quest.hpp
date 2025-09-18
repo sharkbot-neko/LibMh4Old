@@ -1,3 +1,6 @@
+#ifndef QUEST_HPP
+#define QUEST_HPP
+
 #include <CTRPluginFramework.hpp>
 #include "mh4/Quest/Quest/QuestAction.hpp"
 
@@ -29,3 +32,5 @@ public:
     }
 
 };
+
+#endif

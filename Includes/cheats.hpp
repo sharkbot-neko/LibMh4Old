@@ -5,6 +5,8 @@
 #include "Helpers.hpp"
 #include "Unicode.h"
 
+#include "Player.hpp"
+
 namespace CTRPluginFramework
 {
     using StringVector = std::vector<std::string>;

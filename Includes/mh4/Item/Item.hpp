@@ -1,3 +1,6 @@
+#ifndef Item_HPP
+#define Item_HPP
+
 #include <CTRPluginFramework.hpp>
 
 class Item
@@ -9,3 +12,5 @@ public:
         return func((int)offset, (int)itemid, count);
     }
 };
+
+#endif
